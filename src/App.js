@@ -1,13 +1,16 @@
-import React from 'react';
-import UserWeight from './components/UserWeight';
-import UserHeight from './components/UserHeight';
+import React from 'react'
+import './App.css';
+import UserImc from './components/UserIMC'
+import { UserProvider} from './components/user-context'
+
+
 
 function App() {
+
   return (
-    <div className="App">
-     <UserWeight></UserWeight>
-     <UserHeight></UserHeight>
-    </div>
+    <UserProvider weight="60" height="1.60" className="App">
+     <UserImc></UserImc>
+    </UserProvider>
   );
 }
 

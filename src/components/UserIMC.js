@@ -33,7 +33,7 @@ export default function UserIMC(){
             <RangeInput defaultValue={localStorage.getItem('@calculo-imc/weight')} min={20} max={200} step={1} onChange={handleWeightChange}></RangeInput>
 
             <p>Altura: {height}m </p>
-            <RangeInput defaultValue ={localStorage.getItem('@calculo-imc/weight')} min={1.20} max={2.00} step={0.01} onChange={handleHeightChange}></RangeInput>
+            <RangeInput defaultValue={localStorage.getItem('@calculo-imc/height')} min={1.20} max={2.00} step={0.01} onChange={handleHeightChange}></RangeInput>
 
             IMC: {imc}
         </div>        

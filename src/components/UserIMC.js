@@ -26,10 +26,10 @@ export default function UserIMC(){
     return(
         <div>
             <p>Peso: {weight}kg </p>
-            <RangeInput type="range" min={20} max={200} step={1}  defaultValue={60} onChange={handleWeightChange}></RangeInput>
+            <RangeInput min={20} max={200} step={1}  defaultValue={60} onChange={handleWeightChange}></RangeInput>
 
             <p>Altura: {height}m </p>
-            <RangeInput type="range" min={1.20} max={2.00} step={0.01} defaultValue ={1.60} onChange={handleHeightChange}></RangeInput>
+            <RangeInput min={1.20} max={2.00} step={0.01} defaultValue ={1.60} onChange={handleHeightChange}></RangeInput>
 
             IMC: {imc}
         </div>        

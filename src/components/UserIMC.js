@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import {UserContext} from './user-context'
+import {RangeInput} from './range-input'
 
 export default function UserIMC(){
     const userContext = useContext(UserContext)
@@ -25,10 +26,10 @@ export default function UserIMC(){
     return(
         <div>
             <p>Peso: {weight}kg </p>
-            <input type="range" min="20" max="200" step="1"  defaultValue="60" onChange={handleWeightChange} onMouseUp={handleWeightChange} onTouchEnd={handleWeightChange} />
+            <RangeInput type="range" min="20" max="200" step="1"  defaultValue="60" onChange={handleWeightChange}></RangeInput>
 
             <p>Altura: {height}m </p>
-            <input type="range" min="1.20" max="2.00" step="0.01" defaultValue ="1.60" onChange={handleHeightChange} onMouseUp={handleHeightChange} onTouchEnd={handleHeightChange} />
+            <RangeInput type="range" min="1.20" max="2.00" step="0.01" defaultValue ="1.60" onChange={handleHeightChange}></RangeInput>
 
             IMC: {imc}
         </div>        

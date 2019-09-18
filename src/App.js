@@ -8,7 +8,7 @@ import { UserProvider} from './components/user-context'
 function App() {
 
   return (
-    <UserProvider weight="60" height="1.60" className="App">
+    <UserProvider className="App">
      <UserImc></UserImc>
     </UserProvider>
   );

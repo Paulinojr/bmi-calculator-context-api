@@ -8,6 +8,8 @@ export default function UserIMC(){
 
     const handleWeightChange = event => {
         setWeight(event.target.value)
+
+        localStorage.setItem('@calculo-imc/weight', weight)
         
         let imcCalc = (weight / (height * height)).toFixed(1)
 
@@ -16,6 +18,8 @@ export default function UserIMC(){
 
     const handleHeightChange = event => {
         setHeight(event.target.value)
+
+        localStorage.setItem('@calculo-imc/height', height)
 
         let imcCalc = (weight / (height * height)).toFixed(1)
 
@@ -26,10 +30,10 @@ export default function UserIMC(){
     return(
         <div>
             <p>Peso: {weight}kg </p>
-            <RangeInput min={20} max={200} step={1}  defaultValue={60} onChange={handleWeightChange}></RangeInput>
+            <RangeInput defaultValue={localStorage.getItem('@calculo-imc/weight')} min={20} max={200} step={1} onChange={handleWeightChange}></RangeInput>
 
             <p>Altura: {height}m </p>
-            <RangeInput min={1.20} max={2.00} step={0.01} defaultValue ={1.60} onChange={handleHeightChange}></RangeInput>
+            <RangeInput defaultValue ={localStorage.getItem('@calculo-imc/weight')} min={1.20} max={2.00} step={0.01} onChange={handleHeightChange}></RangeInput>
 
             IMC: {imc}
         </div>        

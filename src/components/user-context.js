@@ -36,7 +36,9 @@ UserProvider.propTypes = {
 }
 
 UserProvider.defaultProps = {
-    weight: 60,
-    height: 1.60,
-    imc: 23.4
+    weight: localStorage.getItem('@calculo-imc/weight') !== undefined ? localStorage.getItem('@calculo-imc/weight') : 60,
+    height: localStorage.getItem('@calculo-imc/height') !== undefined ? localStorage.getItem('@calculo-imc/height') : 1.60,
+    imc: 0
 }
+
+UserProvider.defaultProps.imc = (UserProvider.defaultProps.weight / (UserProvider.defaultProps.height * UserProvider.defaultProps.height)).toFixed(1)
